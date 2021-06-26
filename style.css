@@ -1,0 +1,524 @@
+:root {
+  --clr-white: rgb(252, 252, 252);
+  --clr-chromewhite: rgb(245, 247, 250);
+  --clr-pinkwhite: rgb(255, 246, 246);
+  --clr-lightgrey: rgb(202, 201, 202);
+  --clr-grey: rgb(185, 180, 180);
+  --clr-darkgrey: rgb(53, 51, 48);
+  --clr-lightblue: rgb(202, 247, 250);
+  /*  --clr-darkblue:rgb(45, 54, 82);*/
+  --clr-yellowwhite: rgb(253, 253, 250);
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 25px;
+  background: url(cupcake\ background.jpg) top center / 90% 100% fixed;
+}
+/*hide me*/
+::-webkit-scrollbar {
+  width: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--clr-grey);
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 200, 220, 0.363);
+  border-radius: 6px;
+  overflow: hidden;
+}
+/*--------------------------Navigation Start -----------------------*/
+
+.nav-bar {
+  background: var(--clr-chromewhite);
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 15px;
+  z-index: 100;
+  box-shadow: solid 0 0 10px var(--clr-grey);
+  position: fixed;
+  width: 100vw;
+  margin-bottom: -250px;
+}
+
+.logo {
+  width: 190px;
+  height: 80px;
+  margin: 5px;
+  border: solid 2px rgb(8, 8, 8);
+  border-image: radial-gradient(rgb(8, 8, 8), rgb(245, 247, 250)) 1;
+}
+
+.nav-items,
+.short-line {
+  padding: 15px 12px;
+}
+
+.nav-items {
+  letter-spacing: 2.5px;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.short-line {
+  border: 2px solid var(--clr-darkgrey);
+  display: inline;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-image: radial-gradient(var(--clr-darkgrey), var(--clr-chromewhite)) 1;
+}
+.grow:hover {
+  width: 40px;
+  height: 40px;
+}
+.blue:hover a {
+  color: lightseagreen;
+}
+
+.pink:hover a {
+  color: rgba(250, 104, 206, 0.973);
+}
+
+.orange:hover a {
+  color: rgb(236, 138, 25);
+}
+.purple:hover a {
+  color: rgb(179, 102, 180);
+}
+.green:hover a {
+  color: rgb(10, 180, 24);
+}
+
+.order-btn1,
+.footer-order-btn {
+  height: 50px;
+  width: 8rem;
+  letter-spacing: 1px;
+  background: white;
+  margin: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 5px solid red;
+  color: red;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.order-btn1:hover,
+.footer-order-btn:hover {
+  border-color: rgb(107, 248, 236);
+  border-image: none;
+  color: rgb(245, 134, 8);
+  font-size: 1.5rem;
+}
+/*---------------------------Navigation End------------------------*/
+/*-------------------Fonts And Colors Start--------------*/
+
+.nav-items,
+.order-btn-1,
+.cake-font-one,
+.cake-font-three,
+.event-headers,
+.about-h1,
+.section-title {
+  font-family: "Karma", serif;
+}
+
+.f-color,
+a,
+.short-line,
+.about-h1 {
+  color: var(--clr-darkgrey);
+  opacity: 0.9;
+}
+/*---------------------Fonts And Color End-----------------*/
+/*--------------------Section Structure Start ------------*/
+
+/*.section-title {
+  width: 250px;
+  top: 10px;
+  letter-spacing: 5px;
+  line-height: 20px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.9;
+  color: var(--clr-darkgrey); /*not rendering color me thinks*/
+/*        border:pink 1px solid;
+}*/
+
+.center {
+  padding: 20px;
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  height: auto;
+  background: rgb(245, 247, 250);
+  padding-top: 70px;
+  /*margin-top: 500px;*/
+  margin-bottom: 500px;
+  border: solid 3px;
+  border-image: radial-gradient(rgb(185, 180, 180), rgb(245, 247, 250)) 1;
+  box-shadow: 5px 20px 50px black;
+  z-index: 200;
+  opacity: 0.9;
+}
+#menu,
+#contact,
+#events,
+#about {
+  scroll-margin-top: 150px;
+}
+.center-top {
+  margin-top: 550px;
+}
+
+/*--------------------------Section Structure End -----------------*/
+
+/*--------------------------Menu Start ----------------------------*/
+
+.menu-sect {
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 425px;
+  height: 300px;
+  opacity: 1;
+
+  border-image: radial-gradient(var(--clr-chromewhite), var(--clr-yellowwhite))
+    1;
+  box-shadow: 5px 10px 20px var(--clr-white);
+  /* border:3px solid red;  */
+}
+
+.menu-label {
+  position: relative;
+  z-index: 2;
+  top: -190px;
+  font-size: 50px;
+  font-family: "Spirax", cursive;
+  color: whitesmoke;
+  letter-spacing: 4px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.menu-label-line {
+  background: white;
+  margin: auto;
+  margin-top: -10px;
+  border: solid 2px;
+  border-radius: 50%;
+  margin-top: -8px;
+}
+
+.space-fix {
+  margin-top: -110px;
+  /* was -7.75em */
+}
+
+.one {
+  width: 250px;
+}
+
+.two {
+  width: 275px;
+}
+
+.three {
+  width: 150px;
+}
+
+.four {
+  width: 140px;
+}
+
+.nav-line {
+  position: relative;
+  border: solid 1px;
+  border-image: radial-gradient(rgb(45, 54, 82), rgb(245, 247, 250)) 1;
+  opacity: 0.3;
+}
+/*--------------------------Menu End ----------------------------*/
+/*--------------------------Events Cake Tasting Start -----------*/
+
+.event-headers {
+  /* font-size:30px; */
+  font-family: "spirax", serif;
+  padding: 1rem;
+  font-weight: 400;
+  color: rgb(53, 51, 48);
+  text-shadow: 2px 5px 20px rgb(179, 102, 180);
+}
+
+.cake-font-one {
+  font-weight: 900;
+  font-size: 17px;
+  width: 80%;
+  margin: auto;
+  word-spacing: 1.5px;
+}
+
+.cake-font-one,
+.cake-font-three {
+  letter-spacing: 1px;
+  /*        border:solid 1px red;*/
+}
+
+.cake-font-two {
+  /*        border:solid 1px blue;*/
+  text-decoration: underline;
+  font-size: 1.75rem;
+  text-shadow: 2px 5px 20px rgb(101, 214, 230);
+  width: 100%;
+  text-align: center;
+  font-family: "Kelly Slab", serif;
+}
+
+.cake-font-three {
+  line-height: 2.3;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 900;
+  word-spacing: 2px;
+  width: 80%;
+  margin: auto;
+}
+
+.cake-order {
+  padding: 3rem;
+}
+/*--------------------------Events Cake Tasting End -------------*/
+/*--------------------------Contact Start -----------------------*/
+
+.box {
+  padding: 2rem;
+  border-radius: 0.25rem;
+  background: rgb(252, 252, 252);
+}
+
+.forms {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.contact-info {
+  width: 45%;
+  height: 700px;
+  border: solid 0.5px black;
+  float: left;
+  margin-left: 4rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  line-height: 70px;
+  /*try messing with this for transition*/
+  margin-top: 40px;
+  width: 75%;
+  font-size: 22px;
+  padding: 1rem;
+}
+input:focus {
+  outline: none;
+}
+
+.message-form {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  height: 700px;
+  border: solid 0.5px black;
+}
+
+.message-content {
+  width: 90%;
+  height: 25rem;
+  margin: auto;
+  position: relative;
+  border: solid black 0.25px;
+  padding: 2rem;
+  background: rgb(247, 255, 254);
+  border-radius: 0.25rem;
+  overflow: auto;
+  resize: none;
+  font-size: 20px;
+}
+
+.send-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 2rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  background: white;
+  letter-spacing: 2px;
+}
+/*---------------------Contact End -----------------------*/
+/*---------------------------About Us Start----------------------*/
+
+.about-us {
+  padding: 5rem;
+  width: 80%;
+  margin: auto;
+
+  font-size: 20px;
+}
+.about-h1 {
+  font-family: "spirax", serif;
+}
+/*---------------------------About Us End------------------------*/
+/*---------------------Footer Start ----------------------*/
+
+.footer {
+  width: 100%;
+  background: #f5f7fa;
+  display: block;
+}
+
+.footer-logo {
+  width: 230px;
+  height: auto;
+}
+
+.left-foot {
+  position: relative;
+  padding: 1rem;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 2rem;
+  /*        border: 1px solid red;*/
+}
+
+.right-foot {
+  padding: 1rem;
+  float: right;
+  margin-top: 2rem;
+  /*        border: 1px solid red;*/
+  margin-right: 5%;
+}
+
+.crueler {
+  line-height: 3rem;
+}
+
+.footer-nav-icon {
+  float: left;
+  margin-top: 6px;
+  margin-right: -10px;
+}
+
+.address {
+  padding: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  font-stretch: extra-condensed;
+}
+
+.email {
+  margin-top: 1.15rem;
+}
+
+.phone {
+  letter-spacing: 1px;
+}
+
+.address,
+.phone,
+.email {
+  color: rgb(53, 51, 48);
+}
+
+.copyright {
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 5%;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+
+.b {
+  margin-top: 100px;
+}
+
+.footer-nav-item {
+  font-size: 25px;
+  letter-spacing: 2px;
+  /*    border:1px solid red;*/
+}
+/*-----------------------Footer End----------------------*/
+/*-----------------------MEDIA QUERIES-------------------*/
+
+@media only screen and (max-width: 1300px) {
+  .center {
+    width: 100%;
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+  .box {
+    height: auto;
+    display: block;
+  }
+  .forms {
+    width: 100%;
+    /*            height: 1000px; interfered with layout and overlapped footer */
+  }
+  .contact-info {
+    float: none;
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 1000px;
+  }
+  .message-form {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+  .message-content {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .cake-order {
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 900px) {
+}
