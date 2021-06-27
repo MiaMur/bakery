@@ -53,19 +53,16 @@ body {
   box-shadow: solid 0 0 10px var(--clr-grey);
   position: fixed;
   width: 100vw;
-  margin-bottom: -250px;
 }
 
 .logo {
-  width: 190px;
+  width: 200px;
   height: 80px;
-  margin: 5px;
   border: solid 2px rgb(8, 8, 8);
   border-image: radial-gradient(rgb(8, 8, 8), rgb(245, 247, 250)) 1;
 }
 
-.nav-items,
-.short-line {
+.nav-items {
   padding: 15px 12px;
 }
 
@@ -78,14 +75,6 @@ a {
   padding: 1rem;
 }
 
-.short-line {
-  border: 2px solid var(--clr-darkgrey);
-  display: inline;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-image: radial-gradient(var(--clr-darkgrey), var(--clr-chromewhite)) 1;
-}
 .grow:hover {
   width: 40px;
   height: 40px;
@@ -173,7 +162,7 @@ a,
 .center {
   padding: 20px;
   text-align: center;
-  max-width: 80%;
+  max-width: 90vw;
   margin: auto;
   height: auto;
   background: rgb(245, 247, 250);
@@ -201,8 +190,9 @@ a,
 /*--------------------------Menu Start ----------------------------*/
 
 .menu-sect {
-  display: inline-block;
-  position: relative;
+  display: inline-flex;
+  justify-content: space-around;
+  max-width: 80%;
 }
 
 img {
@@ -238,12 +228,8 @@ img {
   margin-top: -8px;
 }
 
-.space-fix {
-  margin-top: -110px;
-  /* was -7.75em */
-}
-
 .one {
+  /*menu-sect*/
   width: 250px;
 }
 
@@ -318,23 +304,27 @@ img {
 /*--------------------------Contact Start -----------------------*/
 
 .box {
-  padding: 2rem;
+  padding: 20px;
   border-radius: 0.25rem;
   background: rgb(252, 252, 252);
 }
 
 .forms {
-  width: 90%;
+  width: 75%;
   height: auto;
   margin: auto;
+  display: inline-block;
+  padding: 20px;
 }
 
 .contact-info {
-  width: 45%;
-  height: 700px;
+}
+.box {
+  height: 500px;
+  width: 30%;
   border: solid 0.5px black;
-  float: left;
-  margin-left: 4rem;
+}
+.message-form {
 }
 
 input[type="text"],
@@ -353,24 +343,16 @@ input:focus {
   outline: none;
 }
 
-.message-form {
-  display: inline-block;
-  position: relative;
-  width: 45%;
-  height: 700px;
-  border: solid 0.5px black;
-}
-
 .message-content {
   width: 90%;
-  height: 25rem;
+  height: 400px;
   margin: auto;
   position: relative;
   border: solid black 0.25px;
   padding: 2rem;
   background: rgb(247, 255, 254);
   border-radius: 0.25rem;
-  overflow: auto;
+  overflow: hidden;
   resize: none;
   font-size: 20px;
 }
