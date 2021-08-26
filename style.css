@@ -9,9 +9,6 @@
   /*  --clr-darkblue:rgb(45, 54, 82);*/
   --clr-yellowwhite: rgb(253, 253, 250);
 }
-html {
-  scroll-behavior: smooth;
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,13 +53,15 @@ body {
 }
 
 .logo {
-  width: 200px;
+  width: 190px;
   height: 80px;
+  margin: 5px;
   border: solid 2px rgb(8, 8, 8);
   border-image: radial-gradient(rgb(8, 8, 8), rgb(245, 247, 250)) 1;
 }
 
-.nav-items {
+.nav-items,
+.short-line {
   padding: 15px 12px;
 }
 
@@ -75,6 +74,14 @@ a {
   padding: 1rem;
 }
 
+.short-line {
+  border: 2px solid var(--clr-darkgrey);
+  display: inline;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-image: radial-gradient(var(--clr-darkgrey), var(--clr-chromewhite)) 1;
+}
 .grow:hover {
   width: 40px;
   height: 40px;
@@ -97,15 +104,18 @@ a {
   color: rgb(10, 180, 24);
 }
 
-.order-btn1,
-.footer-order-btn {
+.order-btn1 {
   height: 50px;
   width: 8rem;
+  color: rgb(179, 102, 180);
   letter-spacing: 1px;
+  border: solid 4px;
   background: white;
   margin: 15px;
-  font-weight: 700;
   border-radius: 5px;
+}
+.footer-order-btn,
+.order-btn {
   border: 5px solid red;
   color: red;
   font-size: 1.5rem;
@@ -115,8 +125,7 @@ a {
   margin-bottom: 20px;
 }
 
-.order-btn1:hover,
-.footer-order-btn:hover {
+.order-btn1:hover {
   border-color: rgb(107, 248, 236);
   border-image: none;
   color: rgb(245, 134, 8);
@@ -145,9 +154,9 @@ a,
 /*---------------------Fonts And Color End-----------------*/
 /*--------------------Section Structure Start ------------*/
 
-/*.section-title {
+.section-title {
   width: 250px;
-  top: 10px;
+  top: 100px;
   letter-spacing: 5px;
   line-height: 20px;
   position: relative;
@@ -156,43 +165,30 @@ a,
   font-size: 2rem;
   opacity: 0.9;
   color: var(--clr-darkgrey); /*not rendering color me thinks*/
-/*        border:pink 1px solid;
-}*/
+  /*        border:pink 1px solid;*/
+}
 
 .center {
   padding: 20px;
   text-align: center;
-  max-width: 90vw;
+  max-width: 80%;
   margin: auto;
-  height: auto;
   background: rgb(245, 247, 250);
   padding-top: 70px;
-  /*margin-top: 500px;*/
-  margin-bottom: 500px;
+  margin-top: 500px;
   border: solid 3px;
   border-image: radial-gradient(rgb(185, 180, 180), rgb(245, 247, 250)) 1;
   box-shadow: 5px 20px 50px black;
   z-index: 200;
   opacity: 0.9;
 }
-#menu,
-#contact,
-#events,
-#about {
-  scroll-margin-top: 150px;
-}
-.center-top {
-  margin-top: 550px;
-}
-
 /*--------------------------Section Structure End -----------------*/
 
 /*--------------------------Menu Start ----------------------------*/
 
 .menu-sect {
-  display: inline-flex;
-  justify-content: space-around;
-  max-width: 80%;
+  display: inline-block;
+  position: relative;
 }
 
 img {
@@ -228,8 +224,12 @@ img {
   margin-top: -8px;
 }
 
+.space-fix {
+  margin-top: -110px;
+  /* was -7.75em */
+}
+
 .one {
-  /*menu-sect*/
   width: 250px;
 }
 
@@ -304,27 +304,23 @@ img {
 /*--------------------------Contact Start -----------------------*/
 
 .box {
-  padding: 20px;
+  padding: 2rem;
   border-radius: 0.25rem;
   background: rgb(252, 252, 252);
 }
 
 .forms {
-  width: 75%;
+  width: 90%;
   height: auto;
   margin: auto;
-  display: inline-block;
-  padding: 20px;
 }
 
 .contact-info {
-}
-.box {
-  height: 500px;
-  width: 30%;
+  width: 45%;
+  height: 700px;
   border: solid 0.5px black;
-}
-.message-form {
+  float: left;
+  margin-left: 4rem;
 }
 
 input[type="text"],
@@ -343,16 +339,24 @@ input:focus {
   outline: none;
 }
 
+.message-form {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  height: 700px;
+  border: solid 0.5px black;
+}
+
 .message-content {
   width: 90%;
-  height: 400px;
+  height: 25rem;
   margin: auto;
   position: relative;
   border: solid black 0.25px;
   padding: 2rem;
   background: rgb(247, 255, 254);
   border-radius: 0.25rem;
-  overflow: hidden;
+  overflow: auto;
   resize: none;
   font-size: 20px;
 }
@@ -373,7 +377,6 @@ input:focus {
   padding: 5rem;
   width: 80%;
   margin: auto;
-
   font-size: 20px;
 }
 .about-h1 {
@@ -482,19 +485,19 @@ input:focus {
   }
   .contact-info {
     float: none;
-    width: 80%;
+    width: 100%;
     display: block;
     margin: auto;
     height: 1000px;
   }
   .message-form {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: block;
   }
   .message-content {
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .cake-order {
     font-size: 1rem;
